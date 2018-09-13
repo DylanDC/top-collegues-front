@@ -1,13 +1,10 @@
-
-
-[![Build Status](https://travis-ci.org/DylanDC/top-collegues-front.svg?branch=master)](https://travis-ci.org/DylanDC/top-collegues-front)
-
-### Lien vers la SPA:
-http://DylanDC.github.io/top-collegues-front
-
 # TopColleguesFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+
+[![Build Status](https://travis-ci.org/FloRockera/top-collegues-front.svg?branch=master)](https://travis-ci.org/FloRockera/top-collegues-front)
+
+https://florockera.github.io/top-collegues-front/
 
 ## Development server
 
@@ -32,5 +29,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
