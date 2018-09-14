@@ -7,20 +7,20 @@ import { Collegue, Avis } from '../model';
   styleUrls: ['./collegue-component.component.css']
 })
 export class CollegueComponentComponent implements OnInit {
-  @Input() collegue:Collegue;
+  @Input() collegue: Collegue;
 
   constructor() {
-   
+
   }
 
-  avisRecu:string;
+  avisRecu: string;
 
-  traiter($event:Avis){
+  traiter($event: Avis) {
     console.log('boolean', $event)
-   // if ($event == Avis.AIMER)
-    this.avisRecu = "Vous avez cliqué sur 'J'aime'";
-    if  ($event == Avis.DETESTER)
-    this.avisRecu = "Vous avez cliqué sur 'Je déteste'";
+    if ($event == Avis.AIMER)
+      this.avisRecu = "Vous avez cliqué sur 'J'aime'";
+    if ($event == Avis.DETESTER)
+      this.avisRecu = "Vous avez cliqué sur 'Je déteste'";
 
   }
 

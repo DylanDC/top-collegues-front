@@ -1,22 +1,10 @@
-<div class="container">
+<button class="btn btn-outline-warning">
 
-<button class="btn btn-outline-warning" >Rafraichir la liste</button> 
-<section>
+  Rafraichir la liste</button>
+<div class="row">
 
-  <section *ngFor="let col of colleguesTab">
+  <section class="mt-4 col-xs-12 col-sm-4" *ngFor="let col of colleguesTab">
 
-    <div class="mt-4">
-        <app-collegue-component [collegue]="col-4"></app-collegue-component>
-       
-
-
-    </div>
-
-
+    <app-collegue-component [collegue]="col"></app-collegue-component>
   </section>
-
-
-</section>
-
-
 </div>

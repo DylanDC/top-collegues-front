@@ -1,3 +1,21 @@
-<p>
-  historique-votes works!
-</p>
+<section>
+  <section *ngFor="let colv of voteTab">
+
+    <div class="mt-2">
+
+      <div class="colv">
+        <div class="card">
+          <img class="card-img-left" src="" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{colv.coll.pseudo}}</h5>
+            <p class="card-text">
+
+              <ng-container *ngIf="colv.avis == 0"> Collègue aimer :) </ng-container>
+              <ng-container *ngIf="colv.avis == 1"> Collègue détesté :( </ng-container>
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-outline-danger" (click)="delete()">Supprimer</button>

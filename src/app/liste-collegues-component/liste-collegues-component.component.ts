@@ -8,12 +8,10 @@ import { Collegue, Avis } from '../model';
 })
 export class ListeColleguesComponentComponent implements OnInit {
 
-  @Input() colleguesTab:Collegue[]
+  @Input() colleguesTab: Collegue[]
 
-  constructor() { 
+  constructor() {
   }
-
-  
 
 
   ngOnInit() {
