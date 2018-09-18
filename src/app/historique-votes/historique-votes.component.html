@@ -1,21 +1,17 @@
-<section>
-  <section *ngFor="let colv of voteTab">
-
-    <div class="mt-2">
-
-      <div class="colv">
-        <div class="card">
-          <img class="card-img-left" src="" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">{{colv.coll.pseudo}}</h5>
-            <p class="card-text">
-
-              <ng-container *ngIf="colv.avis == 0"> Collègue aimer :) </ng-container>
-              <ng-container *ngIf="colv.avis == 1"> Collègue détesté :( </ng-container>
-
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <button type="button" class="btn btn-outline-danger" (click)="delete()">Supprimer</button>
+<h3>Historique
+  <span class="badge red">{{votes.length}} </span>
+</h3>
+<!-- création d'une card -->
+<div class="card mt-4" *ngFor="let vote of votes">
+  <!-- nom de la card en titre -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+      <img class="img-fluid" src="{{vote.collegue.url}}" alt="Card image cap">
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-6">
+      <p class="card-text">{{vote.collegue.pseudo}}</p>
+      <p class="card-text">{{vote.collegue.pseudo}} est détesté, il a désormais un score de {{vote.collegue.points}} </p>
+      <button type="button" (click)="supprimer(vote)" class="btn btn-warning">Supprimer</button>
+    </div>
+  </div>
+</div>
