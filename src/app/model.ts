@@ -4,8 +4,7 @@ export enum Avis { AIMER, DETESTER };
 //Creation d'une structure Collegue
 export class Collegue {
 
-    pseudo: string
-    score: number
+    constructor(public pseudo: number, public score: number, public url: string) { }
 
 }
 

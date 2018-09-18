@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
 import { Collegue, Avis } from '../model';
+import { CollegueService } from '../services/collegue.service';
 
 @Component({
   selector: 'app-collegue-component',
@@ -9,19 +10,24 @@ import { Collegue, Avis } from '../model';
 export class CollegueComponentComponent implements OnInit {
   @Input() collegue: Collegue;
 
-  constructor() {
+  constructor(private _collegueSrv: CollegueService) {
 
   }
 
   avisRecu: string;
 
-  traiter($event: Avis) {
-    console.log('boolean', $event)
-    if ($event == Avis.AIMER)
-      this.avisRecu = "Vous avez cliqué sur 'J'aime'";
-    if ($event == Avis.DETESTER)
-      this.avisRecu = "Vous avez cliqué sur 'Je déteste'";
+  traiter(avis: Avis) {
+    this._collegueSrv.donnerUnAvis(this.collegue, avis).then(col => {
+      if (avis === Avis.AIMER) {
+        this.collegue.score = col.score
+        this.avisRecu = "Vous avez cliqué sur 'J'aime'";
+      }
+      if (avis === Avis.DETESTER) {
+        this.collegue.score = col.score
+        this.avisRecu = "Vous avez cliqué sur 'Je déteste'";
 
+      }
+    })
   }
 
   ngOnInit() {
