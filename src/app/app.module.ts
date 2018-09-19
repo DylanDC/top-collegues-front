@@ -16,9 +16,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'demo', component: ListeColleguesComponentComponent },
+  { path: 'collegues/:name', component: DetailCollegueComponent },
 ];
 
 @NgModule({
@@ -34,7 +36,8 @@ const routes: Routes = [
     ListeColleguesComponentComponent,
     HistoriqueVotesComponent,
     AccueilComponent,
-    MenuComponent
+    MenuComponent,
+    DetailCollegueComponent
   ],
   imports: [
     BrowserModule,

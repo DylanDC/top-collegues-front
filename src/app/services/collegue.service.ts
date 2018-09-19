@@ -32,13 +32,17 @@ export class CollegueService {
     };
 
     if (avis === Avis.AIMER) {
-      resultat = this._http.patch(URL_BACKEND + `/${unCollegue.pseudo}`, "{ \"action\" : \"AIMER\" }", httpOptions).toPromise()
+      resultat = this._http.patch(URL_BACKEND + `/${unCollegue.name}`, "{ \"action\" : \"AIMER\" }", httpOptions).toPromise()
     }
     if (avis === Avis.DETESTER) {
-      resultat = this._http.patch(URL_BACKEND + `/${unCollegue.pseudo}`, "{ \"action\" : \"DETESTER\"}", httpOptions).toPromise()
+      resultat = this._http.patch(URL_BACKEND + `/${unCollegue.name}`, "{ \"action\" : \"DETESTER\"}", httpOptions).toPromise()
     }
     return resultat
   }
 
-
+  findByName(name: string): Promise<Collegue> {
+    return this._http.get(URL_BACKEND + `/${name}`)
+      .toPromise()
+      .then((data: any) => new Collegue(data.name, data.score, data.url))
+  }
 }
