@@ -17,6 +17,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
+
+import { AnimatedGaleryComponent } from './animated-galery/animated-galery.component';
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'demo', component: DemoComponent },
@@ -37,7 +39,9 @@ const routes: Routes = [
     HistoriqueVotesComponent,
     AccueilComponent,
     MenuComponent,
-    DetailCollegueComponent
+    DetailCollegueComponent,
+   
+    AnimatedGaleryComponent
   ],
   imports: [
     BrowserModule,
