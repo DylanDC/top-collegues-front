@@ -18,7 +18,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
 const routes: Routes = [
-  { path: 'accueil', component: AccueilComponent },
+  { path: '/', component: AccueilComponent },
   { path: 'demo', component: DemoComponent },
   { path: 'collegues/:name', component: DetailCollegueComponent },
 ];
