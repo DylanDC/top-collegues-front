@@ -1,17 +1,34 @@
-<h3>Historique
-  <span class="badge red">{{votes.length}} </span>
-</h3>
+<!-- Creation de l'entete-->
+<hr>
+<div class="row">
+  <div class="col-md-5 col-md-offset-2">
+    <h3>
+      <strong>Historique</strong>
+    </h3>
+  </div>
+  <div class="col-md-5 col-md-offset-2">
+    <strong>
+      <h3>
+        <span class="badge red">{{votes.length}} </span>
+      </h3>
+    </strong>
+  </div>
+</div>
+<hr>
+
 <!-- création d'une card -->
-<div class="card mt-4" *ngFor="let vote of votes">
+<div class="card mt-4 " *ngFor="let vote of votes">
   <!-- nom de la card en titre -->
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
-      <img class="img-fluid" src="{{vote.collegue.url}}" alt="Card image cap">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6  ">
+      <img class="img-fluid center" src="{{vote.collegue.url}}" alt="Card image cap">
     </div>
     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-6">
-      <p class="card-text">{{vote.collegue.pseudo}}</p>
+      <p class="card-text">
+        <strong>{{vote.collegue.pseudo}}</strong>
+      </p>
       <p class="card-text">{{vote.collegue.pseudo}} est détesté, il a désormais un score de {{vote.collegue.points}} </p>
-      <button type="button" (click)="supprimer(vote)" class="btn btn-warning">Supprimer</button>
+      <button type="button" (click)="supprimer(vote)" class="btn-xs btn-danger btn-rounded ">Supprimer</button>
     </div>
   </div>
 </div>
