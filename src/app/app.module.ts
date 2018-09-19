@@ -19,7 +19,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
-  { path: 'demo', component: ListeColleguesComponentComponent },
+  { path: 'demo', component: DemoComponent },
   { path: 'collegues/:name', component: DetailCollegueComponent },
 ];
 
