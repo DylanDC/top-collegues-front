@@ -14,6 +14,12 @@ import { ListeColleguesComponentComponent } from './liste-collegues-component/li
 import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
+import { MenuComponent } from './menu/menu.component';
+import { RouterModule, Routes } from '@angular/router';
+const routes: Routes = [
+  { path: '', component: AccueilComponent },
+  { path: 'demo', component: DemoComponent },
+];
 
 @NgModule({
   declarations: [
@@ -27,12 +33,14 @@ import { AccueilComponent } from './accueil/accueil.component';
     CollegueComponentComponent,
     ListeColleguesComponentComponent,
     HistoriqueVotesComponent,
-    AccueilComponent
+    AccueilComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    RouterModule.forRoot(routes)
 
   ],
   providers: [],

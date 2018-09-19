@@ -13,6 +13,7 @@ export class Vote {
     collegue: Collegue;
     avis: Avis
 
+
     constructor(avis, collegue) {
         this.avis = avis;
         this.collegue = collegue;
