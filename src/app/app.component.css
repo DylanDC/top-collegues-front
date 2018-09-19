@@ -1,0 +1,9 @@
+body {
+    background-image: url("https://www.elegantthemes.com/blog/wp-content/uploads/2017/03/like-dislike-featured.jpg");
+    background-repeat: repeat-y repeat-x;
+}
+
+.jumbotron1
+{   background-image: -webkit-radial-gradient(white,rgb(200,255,255));  
+ 
+}

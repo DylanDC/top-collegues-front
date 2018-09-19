@@ -1,7 +1,7 @@
 import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
 import { Collegue, Avis } from '../model';
 import { CollegueService } from '../services/collegue.service';
-
+import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-collegue-component',
   templateUrl: './collegue-component.component.html',
@@ -14,7 +14,9 @@ export class CollegueComponentComponent implements OnInit {
   }
 
   avisRecu: string;
-
+  errMsg: string;
+  ngOnInit() {
+  }
   traiter(avis: Avis) {
     this._collegueSrv.donnerUnAvis(this.collegue, avis).then(col => {
       if (avis === Avis.AIMER) {
@@ -23,13 +25,19 @@ export class CollegueComponentComponent implements OnInit {
       }
       if (avis === Avis.DETESTER) {
         this.collegue.score = col.score
-        this.avisRecu = "Vous avez cliqué sur 'Je déteste'";
-
+        this.avisRecu = "Vous avez cliqué sur 'Je Deteste'";
       }
-    })
-  }
+      
+    }).catch((errServeur: HttpErrorResponse) => {
+      if (errServeur.error.message) {
+        this.errMsg = errServeur.error.message;
+      } else {
+        this.errMsg = 'Erreur technique côté serveur';
+      }
+    });
+  
 
-  ngOnInit() {
   }
-
 }
+
+

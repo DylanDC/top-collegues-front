@@ -13,12 +13,10 @@ export class Collegue {
 
 //Création d'une structure vote
 export class Vote {
-    collegue: Collegue;
-    avis: Avis
+    
 
 
-    constructor(avis, collegue) {
-        this.avis = avis;
-        this.collegue = collegue;
-    }
+    constructor(
+        public avis: Avis,
+        public collegue:Collegue,) {}
 }
