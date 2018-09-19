@@ -6,9 +6,27 @@
   <base href="https://dylandc.github.io/top-collegues-front/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="https://www.favicon.cc/logo3d/601819.png">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type="text/javascript" >
+  $(document).ready(function() {
+    $("#css3dimagePager li").click(function(){
+       var rotateY = ($(this).index() * -90); 
+       $("#css3dimageslider ul").css({"-webkit-transform":"rotateY("+rotateY+"deg)", "-moz-transform":"rotateY("+rotateY+"deg)", "-ms-transform":"rotateY("+rotateY+"deg)", "transform":"rotateY("+rotateY+"deg)"});
+       $("#css3dimagePager li").removeClass("active");
+       $(this).addClass("active");
+   });
+    $("#css3dtransparency").click(function() {
+       $("#css3dimageslider").toggleClass("transparency");
+       $(this).toggleClass("active");
+   });
+});
+  </script>
+  
 <link rel="stylesheet" href="styles.c0d906cabe5630c890fc.css"></head>
 <body>
   
   <app-root></app-root>
-<script type="text/javascript" src="runtime.06daa30a2963fa413676.js"></script><script type="text/javascript" src="polyfills.f6ae3e8b63939c618130.js"></script><script type="text/javascript" src="scripts.968f55bfb751cd0febb2.js"></script><script type="text/javascript" src="main.872e4f34e89009afa702.js"></script></body>
+<script type="text/javascript" src="runtime.06daa30a2963fa413676.js"></script><script type="text/javascript" src="polyfills.f6ae3e8b63939c618130.js"></script><script type="text/javascript" src="scripts.968f55bfb751cd0febb2.js"></script><script type="text/javascript" src="main.38b2cb5ce167a64153fe.js"></script></body>
 </html>
