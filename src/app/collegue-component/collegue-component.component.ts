@@ -9,7 +9,6 @@ import { CollegueService } from '../services/collegue.service';
 })
 export class CollegueComponentComponent implements OnInit {
   @Input() collegue: Collegue;
-
   constructor(private _collegueSrv: CollegueService) {
 
   }

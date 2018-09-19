@@ -1,15 +1,17 @@
-<!-- <div class="container">
+<header>
+    <app-bandeau-component>
+    </app-bandeau-component>
+</header>
 
-<section [hidden]='masquerSection'>
-<h1>Application Employé Du Mois</h1>
-<app-bonjour></app-bonjour>
-<app-bonjour-avec-prenom [prenom]="'SubZero'"></app-bonjour-avec-prenom>
-<app-bonjour-les-collegues></app-bonjour-les-collegues>
-</section>
 
-<app-demo></app-demo>
+<app-menu></app-menu>
 
-</div> -->
-<div class="container">
-    <app-accueil></app-accueil>
-</div>
+<body>
+
+
+    <router-outlet></router-outlet>
+
+</body>
+<footer>
+    <!-- Pied de page -->
+</footer>

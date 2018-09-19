@@ -17,8 +17,8 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
-  { path: '', component: AccueilComponent },
-  { path: 'demo', component: DemoComponent },
+  { path: 'accueil', component: AccueilComponent },
+  { path: 'demo', component: ListeColleguesComponentComponent },
 ];
 
 @NgModule({

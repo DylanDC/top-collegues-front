@@ -8,9 +8,9 @@
   </div>
   <div class="col-md-5 col-md-offset-2">
     <strong>
-      <h3>
+      <h4>
         <span class="badge red">{{votes.length}} </span>
-      </h3>
+      </h4>
     </strong>
   </div>
 </div>
@@ -28,7 +28,7 @@
         <strong>{{vote.collegue.pseudo}}</strong>
       </p>
       <p class="card-text">{{vote.collegue.pseudo}} est détesté, il a désormais un score de {{vote.collegue.points}} </p>
-      <button type="button" (click)="supprimer(vote)" class="btn-xs btn-danger btn-rounded ">Supprimer</button>
+      <button type="button" (click)="supprimer(vote)" class="btn btn-danger btn-rounded ">Supprimer</button>
     </div>
   </div>
 </div>
