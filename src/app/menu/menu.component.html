@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink='/accueil'>
     <img src="http://www.iconarchive.com/download/i87094/graphicloads/colorful-long-shadow/Home.ico" alt="bootstrap" style="width: 30px; height: 30px;"
       img-thumbnail>
@@ -17,4 +17,25 @@
 
     </div>
   </div>
-</nav>
+</nav>-->
+
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark green">
+  <mdb-navbar-brand>
+    <a routerLink='/accueil' class="navbar-brand"><img src="http://www.iconarchive.com/download/i87094/graphicloads/colorful-long-shadow/Home.ico" alt="bootstrap" style="width: 30px; height: 30px;"
+      img-thumbnail></a>
+</mdb-navbar-brand>
+<links>
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link waves-light "mdbWavesEffect routerLink='/accueil'>Accueil<span class="sr-only ">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link waves-light "mdbWavesEffect routerLink='/demo'>Demo<span class="sr-only ">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link waves-light "mdbWavesEffect routerLink='/nouveau'>Ajouter Collègue<span class="sr-only ">(current)</span></a>
+        </li>
+        
+    </ul>
+</links>
+  </mdb-navbar>
