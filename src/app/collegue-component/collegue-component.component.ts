@@ -16,8 +16,10 @@ export class CollegueComponentComponent implements OnInit {
   avisRecu: string;
   errMsg: string;
   ngOnInit() {
+    console.log(this.collegue)
   }
   traiter(avis: Avis) {
+
     this._collegueSrv.donnerUnAvis(this.collegue, avis).then(col => {
       if (avis === Avis.AIMER) {
         this.collegue.score = col.score
@@ -27,7 +29,7 @@ export class CollegueComponentComponent implements OnInit {
         this.collegue.score = col.score
         this.avisRecu = "Vous avez cliqué sur 'Je Deteste'";
       }
-      
+
     }).catch((errServeur: HttpErrorResponse) => {
       if (errServeur.error.message) {
         this.errMsg = errServeur.error.message;
@@ -35,7 +37,7 @@ export class CollegueComponentComponent implements OnInit {
         this.errMsg = 'Erreur technique côté serveur';
       }
     });
-  
+
 
   }
 }

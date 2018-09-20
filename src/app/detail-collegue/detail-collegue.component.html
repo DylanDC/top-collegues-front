@@ -1,1 +1,28 @@
-<app-collegue-component [collegue]="collegue"></app-collegue-component>
+<div class="card text-center">
+    <img class="card-img-top" src={{collegue.url}} alt="Card image cap">
+    <div class="card-body">
+
+        <h5 class="card-title">
+            <strong>{{collegue.name}}</strong>
+        </h5>
+        <p class="card-text">Score : {{collegue.score}}</p>
+        <p class="card-text">Nom :{{collegue.nom}}</p>
+        <p class="card-text">Prenom :{{collegue.prenom}}</p>
+        <p class="card-text">Email :{{collegue.email}}</p>
+        <p class="card-text">Date de naissance : {{collegue.dateNaissance}}</p>
+        <p class="card-text">Sexe : {{collegue.sexe}}</p>
+        <p class="card-text">Adresse :{{collegue.adresse}}</p>
+
+    </div>
+
+
+
+    <div class="card-footer">
+        <app-avis-component (avis)="traiter($event)"></app-avis-component>
+        {{avisRecu}}
+    </div>
+
+    <div class="card-footer" *ngIf="errMsg">
+        {{errMsg}}
+    </div>
+</div>

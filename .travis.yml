@@ -4,6 +4,8 @@ node_js:
 before_script:
   - npm install
 script: npm run build
+#ajout de cette ligne pour dupliquer le fichier index afin d'eviter le 404 lors d'un f5
+  - cp dist/top-collegues-front/index.html dist/top-collegues-front/404.html
 deploy:
   local-dir: dist/top-collegues-front
   provider: pages

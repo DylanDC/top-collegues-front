@@ -1,17 +1,13 @@
-
-  
-    
+<!-- <button type="button" class="btn btn-warning  ">Raffraichir la liste</button>-->
 
 
-     <!-- <button type="button" class="btn btn-warning  ">Raffraichir la liste</button>-->
 
-    
-  
 
-  <div class="row ">
+<div class="row ">
 
-    <div class="mt-4 col-xs-12 col-sm-4" *ngFor="let col of colleguesTab">
+  <div class="mt-4 col-xs-12 col-sm-4" *ngFor="let collegue of colleguesTab">
 
-      <app-collegue-component [collegue]="col"></app-collegue-component>
-    </div>
+    <app-collegue-component [collegue]="collegue"></app-collegue-component>
+
   </div>
+</div>

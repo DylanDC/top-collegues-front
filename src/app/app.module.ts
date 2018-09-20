@@ -19,9 +19,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
 
 import { AnimatedGaleryComponent } from './animated-galery/animated-galery.component';
+import { AjouterCollegueComponent } from './ajouter-collegue/ajouter-collegue.component';
+import { FormsModule } from '@angular/forms';
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'demo', component: DemoComponent },
+  { path: 'nouveau', component: AjouterCollegueComponent },
   { path: 'collegues/:name', component: DetailCollegueComponent },
 ];
 
@@ -40,14 +43,17 @@ const routes: Routes = [
     AccueilComponent,
     MenuComponent,
     DetailCollegueComponent,
-   
-    AnimatedGaleryComponent
+
+    AnimatedGaleryComponent,
+
+    AjouterCollegueComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
 
   ],
   providers: [],
