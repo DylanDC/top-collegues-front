@@ -12,10 +12,10 @@ export class HistoriqueVotesComponent implements OnInit {
   constructor() {
 
 
-    this.votes = this.votes.concat([new Vote(Avis.AIMER, new Collegue("Dev 1", -1000, "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1673994/profile/profile-512.jpg?1515254870")),
-    new Vote(Avis.AIMER, new Collegue("Dev 2", 5, "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1673994/profile/profile-512.jpg?1515254870")),
-    new Vote(Avis.DETESTER, new Collegue("Dev 3", 1000, "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1673994/profile/profile-512.jpg?1515254870")),
-    new Vote(Avis.DETESTER, new Collegue("Dev 4", -450, "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1673994/profile/profile-512.jpg?1515254870"))
+    this.votes = this.votes.concat([new Vote(Avis.AIMER, new Collegue("Dev 1", -1000, "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1673994/profile/profile-512.jpg?1515254870",null,null,null,null,null,null,null)),
+    new Vote(Avis.AIMER, new Collegue("Dev 2", 5, "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1673994/profile/profile-512.jpg?1515254870",null,null,null,null,null,null,null)),
+    new Vote(Avis.DETESTER, new Collegue("Dev 3", 1000, "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1673994/profile/profile-512.jpg?1515254870",null,null,null,null,null,null,null)),
+    new Vote(Avis.DETESTER, new Collegue("Dev 4", -450, "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1673994/profile/profile-512.jpg?1515254870",null,null,null,null,null,null,null))
     ]);
     this.nbrVotes = this.votes.length;
   }
