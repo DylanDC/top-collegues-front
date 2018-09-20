@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Form, Collegue, Avis } from '../model';
-import { url } from 'inspector';
+import { Component, OnInit,} from '@angular/core';
+import { Form,} from '../model';
 import { CollegueService } from '../services/collegue.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
