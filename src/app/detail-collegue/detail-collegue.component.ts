@@ -12,7 +12,7 @@ export class DetailCollegueComponent implements OnInit {
   name: string;
   collegue: Collegue;
   errMsg: string;
-  avisRecu: string;
+
   constructor(private route: ActivatedRoute, private _collegueSrv: CollegueService) {
     this.name = route.snapshot.paramMap.get("name");
 
@@ -20,33 +20,33 @@ export class DetailCollegueComponent implements OnInit {
 
   ngOnInit() {
     this.collegue = new Collegue("", 0, "", "", "", "", "", "", "", "");
-    this._collegueSrv.findByName(this.name).then(col => this.collegue = col).catch((errServeur: HttpErrorResponse) => {
+    this._collegueSrv.findByName(this.name).subscribe(col => this.collegue = col), (errServeur: HttpErrorResponse) => {
       if (errServeur.error.message) {
         this.errMsg = errServeur.error.message;
       } else {
         this.errMsg = 'Erreur technique côté serveur';
       }
-    });
+    };
   }
   traiter(avis: Avis) {
 
-    this._collegueSrv.donnerUnAvis(this.collegue, avis).then(col => {
+    this._collegueSrv.donnerUnAvis(this.collegue, avis).subscribe(col => {
       if (avis === Avis.AIMER) {
         this.collegue.score = col.score
-        this.avisRecu = "Vous avez cliqué sur 'J'aime'";
+
       }
       if (avis === Avis.DETESTER) {
         this.collegue.score = col.score
-        this.avisRecu = "Vous avez cliqué sur 'Je Deteste'";
+
       }
 
-    }).catch((errServeur: HttpErrorResponse) => {
+    }), (errServeur: HttpErrorResponse) => {
       if (errServeur.error.message) {
         this.errMsg = errServeur.error.message;
       } else {
         this.errMsg = 'Erreur technique côté serveur';
       }
-    });
+    };
 
   }
 }

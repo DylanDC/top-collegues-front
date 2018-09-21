@@ -21,6 +21,10 @@ import { DetailCollegueComponent } from './detail-collegue/detail-collegue.compo
 import { AnimatedGaleryComponent } from './animated-galery/animated-galery.component';
 import { AjouterCollegueComponent } from './ajouter-collegue/ajouter-collegue.component';
 import { FormsModule } from '@angular/forms';
+import { ScorePipe } from './pipes/score.pipe';
+import { SearchPipe } from './pipes/search.pipe';
+import { VotreDernierAvisComponent } from './votre-dernier-avis/votre-dernier-avis.component';
+import { LastAvisPipe } from './pipes/last-avis.pipe';
 const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'demo', component: DemoComponent },
@@ -46,7 +50,15 @@ const routes: Routes = [
 
     AnimatedGaleryComponent,
 
-    AjouterCollegueComponent
+    AjouterCollegueComponent,
+
+    ScorePipe,
+
+    SearchPipe,
+
+    VotreDernierAvisComponent,
+
+    LastAvisPipe
   ],
   imports: [
     BrowserModule,

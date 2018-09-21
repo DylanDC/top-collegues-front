@@ -15,11 +15,15 @@ export class AccueilComponent implements OnInit {
 
   }
 
- 
+
 
 
   ngOnInit() {
-    this._collegueSrv.listerCollegues().then(tabCollegue => (this.collegues = tabCollegue))
+    this._collegueSrv.listerCollegues().subscribe(tabCollegue => (this.collegues = tabCollegue))
   }
 
+
+  raffraichir() {
+    this.ngOnInit()
+  }
 }

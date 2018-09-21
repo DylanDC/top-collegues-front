@@ -1,5 +1,5 @@
-import { Component, OnInit,} from '@angular/core';
-import { Form,} from '../model';
+import { Component, OnInit, } from '@angular/core';
+import { Form, } from '../model';
 import { CollegueService } from '../services/collegue.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -19,16 +19,14 @@ export class AjouterCollegueComponent implements OnInit {
   errMsg: string;
   submit() {
     console.log(this.form)
-    this._collegueSrv.sendForm(this.form).catch((errServeur: HttpErrorResponse) => {
-      if (errServeur.error.message) {
-        this.errMsg = errServeur.error.message;
-      } else {
-        this.errMsg = 'Erreur technique côté serveur';
-      }
-    });
-  }
-
-
-
+    this._collegueSrv.sendForm(this.form).subscribe(
+      text => console.log("Ok", text),
+      err => console.log('errr', err)
+    )
+  };
 }
+
+
+
+
 

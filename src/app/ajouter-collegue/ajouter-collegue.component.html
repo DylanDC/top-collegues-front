@@ -14,4 +14,7 @@
     <input type="text" [(ngModel)]="form.urlImage" #url="ngModel" class="form-control" placeholder="Image Url" [ngModelOptions]="{standalone: true}">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="card-footer" *ngIf="errMsg">
+    {{errMsg}}
+  </div>
 </form>

@@ -17,7 +17,5 @@ export class ListeColleguesComponentComponent implements OnInit {
   ngOnInit() {
   }
 
-  raffraichir(){
-    this.ngOnInit()
-  }
+
 }
