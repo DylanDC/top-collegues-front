@@ -10,6 +10,9 @@ export class ListeColleguesComponentComponent implements OnInit {
 
   @Input() colleguesTab: Collegue[]
 
+  searchText: string;
+
+
   constructor() {
   }
 
