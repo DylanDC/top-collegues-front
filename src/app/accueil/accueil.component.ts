@@ -24,6 +24,6 @@ export class AccueilComponent implements OnInit {
 
 
   raffraichir() {
-    this.ngOnInit()
+
   }
 }
