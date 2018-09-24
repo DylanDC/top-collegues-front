@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CollegueService } from '../services/collegue.service';
 import { Avis } from '../model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-votre-dernier-avis',
@@ -9,11 +10,11 @@ import { Avis } from '../model';
 })
 export class VotreDernierAvisComponent implements OnInit {
   resultat: string;
-
+  abonnementSuperBus: Subscription;
   constructor(private _collegueSrv: CollegueService) { }
 
   ngOnInit() {
-    this._collegueSrv.bus.subscribe(vote => {
+    this.abonnementSuperBus = this._collegueSrv.bus.subscribe(vote => {
 
       if (vote.avis === Avis.AIMER) {
         this.resultat = "J'ai aimé"
@@ -25,6 +26,10 @@ export class VotreDernierAvisComponent implements OnInit {
 
       this.resultat += (" " + vote.collegue.name)
     })
+  }
+
+  ngOnDestroy() {
+    this.abonnementSuperBus.unsubscribe();
   }
 
 }
